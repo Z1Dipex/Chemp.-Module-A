@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - BestGames</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-dark">
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M20 0L40 10V30L20 40L0 30V10L20 0Z" fill="#6C5CE7"/>
+                        <path d="M15 15L25 15L25 25L15 25Z" fill="#FFFFFF"/>
+                        <path d="M10 10L30 10L30 30L10 30Z" stroke="#FFFFFF" stroke-width="2"/>
+                    </svg>
+                    <span class="header__logo-text">BestGames</span>
+                </div>
+                
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="index.html#search" class="header__nav-link">Поиск</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="login.html" class="header__nav-link">Войти</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="profile.html" class="header__nav-link header__nav-link--active">Личный кабинет</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="catalog.html" class="header__nav-link">Каталог игр</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <button class="header__burger">
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="profile">
+        <div class="container">
+            <div class="profile__content">
+                <!-- User Info Section -->
+                <section class="profile-section">
+                    <h1 class="profile-section__title">Личный кабинет</h1>
+                    
+                    <div class="user-info">
+                        <div class="user-info__avatar">
+                            <div class="avatar">
+                                <span class="avatar__text">ИИ</span>
+                            </div>
+                        </div>
+                        
+                        <div class="user-info__details">
+                            <div class="user-info__item">
+                                <span class="user-info__label">E-mail:</span>
+                                <span class="user-info__value">ivan.ivanov@email.com</span>
+                            </div>
+                            <div class="user-info__item">
+                                <span class="user-info__label">Фамилия:</span>
+                                <span class="user-info__value">Иванов</span>
+                            </div>
+                            <div class="user-info__item">
+                                <span class="user-info__label">Имя:</span>
+                                <span class="user-info__value">Иван</span>
+                            </div>
+                            <div class="user-info__item">
+                                <span class="user-info__label">Дата рождения:</span>
+                                <span class="user-info__value">15.03.1995</span>
+                            </div>
+                            <div class="user-info__item">
+                                <span class="user-info__label">Номер телефона:</span>
+                                <span class="user-info__value">+7 (999) 123-45-67</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Purchase History -->
+                <section class="profile-section">
+                    <h2 class="profile-section__title">История покупок</h2>
+                    
+                    <div class="purchase-history">
+                        <div class="purchase-card">
+                            <div class="purchase-card__info">
+                                <span class="purchase-card__date">12.01.2024</span>
+                                <span class="purchase-card__name">Cyberpunk 2077 + DLC</span>
+                                <span class="purchase-card__price">₽3,499</span>
+                            </div>
+                            <div class="purchase-card__status purchase-card__status--completed">
+                                Завершено
+                            </div>
+                        </div>
+                        
+                        <div class="purchase-card">
+                            <div class="purchase-card__info">
+                                <span class="purchase-card__date">05.01.2024</span>
+                                <span class="purchase-card__name">The Witcher 3: Wild Hunt</span>
+                                <span class="purchase-card__price">₽1,499</span>
+                            </div>
+                            <div class="purchase-card__status purchase-card__status--completed">
+                                Завершено
+                            </div>
+                        </div>
+                        
+                        <div class="purchase-card">
+                            <div class="purchase-card__info">
+                                <span class="purchase-card__date">28.12.2023</span>
+                                <span class="purchase-card__name">Набор внутриигровых предметов (DOTA 2)</span>
+                                <span class="purchase-card__price">₽799</span>
+                            </div>
+                            <div class="purchase-card__status purchase-card__status--completed">
+                                Завершено
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Profile Settings -->
+                <section class="profile-section">
+                    <h2 class="profile-section__title">Настройки профиля</h2>
+                    
+                    <div class="profile-settings">
+                        <div class="setting-group">
+                            <button class="button button--secondary setting-button" id="changePasswordBtn">
+                                Сменить пароль
+                            </button>
+                        </div>
+                        
+                        <div class="setting-group">
+                            <label class="setting-label">Тема интерфейса:</label>
+                            <div class="theme-switcher">
+                                <button class="theme-option theme-option--dark theme-option--active" data-theme="dark">
+                                    <span class="theme-option__icon">🌙</span>
+                                    <span class="theme-option__text">Темная</span>
+                                </button>
+                                <button class="theme-option theme-option--light" data-theme="light">
+                                    <span class="theme-option__icon">☀️</span>
+                                    <span class="theme-option__text">Светлая</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="setting-group">
+                            <label class="setting-label">Админ-панель</label>
+                            <div class="theme-switcher">
+                                <button class="theme-option theme-option--dark theme-option--active" data-theme="dark">
+                                    <span class="theme-option__icon"></span>
+                                    <span class="theme-option__text"><a href="admin.html">Войти</a></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Change Password Modal -->
+    <div class="modal" id="passwordModal">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3 class="modal__title">Смена пароля</h3>
+                <button class="modal__close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal__body">
+                <form class="password-form" id="passwordForm">
+                    <div class="form-group">
+                        <label for="currentPassword" class="form-label">Текущий пароль</label>
+                        <input type="password" id="currentPassword" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newPassword" class="form-label">Новый пароль</label>
+                        <input type="password" id="newPassword" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmNewPassword" class="form-label">Подтвердите новый пароль</label>
+                        <input type="password" id="confirmNewPassword" class="form-input" required>
+                    </div>
+                    <div class="modal__actions">
+                        <button type="button" class="button button--secondary" id="cancelPassword">Отмена</button>
+                        <button type="submit" class="button button--primary">Сохранить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">Контакты</h3>
+                    <p class="footer__text">Телефон: 8-800-999-55-99</p>
+                    <p class="footer__text">Email: support@bestgames.ru</p>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Клиентам</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Помощь</a></li>
+                        <li><a href="#" class="footer__link">Акции</a></li>
+                        <li><a href="#" class="footer__link">Гарантии</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Навигация</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="register.html" class="footer__link">Регистрация</a></li>
+                        <li><a href="login.html" class="footer__link">Авторизация</a></li>
+                        <li><a href="profile.html" class="footer__link">Личный кабинет</a></li>
+                        <li><a href="index.html#search" class="footer__link">Поиск</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>
