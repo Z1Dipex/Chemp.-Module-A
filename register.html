@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - BestGames</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-dark">
+    <!-- Header (такой же как на главной) -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M20 0L40 10V30L20 40L0 30V10L20 0Z" fill="#6C5CE7"/>
+                        <path d="M15 15L25 15L25 25L15 25Z" fill="#FFFFFF"/>
+                        <path d="M10 10L30 10L30 30L10 30Z" stroke="#FFFFFF" stroke-width="2"/>
+                    </svg>
+                    <span class="header__logo-text">BestGames</span>
+                </div>
+                
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="index.html#search" class="header__nav-link">Поиск</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="login.html" class="header__nav-link">Войти</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="profile.html" class="header__nav-link">Личный кабинет</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="catalog.html" class="header__nav-link">Каталог игр</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <button class="header__burger">
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Registration Form -->
+    <main class="auth-section">
+        <div class="container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h1 class="auth-title">Создать аккаунт</h1>
+                    <p class="auth-subtitle">Присоединяйтесь к BestGames сегодня</p>
+                </div>
+                
+                <form class="auth-form" id="registrationForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="email" class="form-label">E-mail *</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
+                            <span class="form-error" id="emailError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName" class="form-label">Фамилия *</label>
+                            <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Иванов" required>
+                            <span class="form-error" id="lastNameError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="firstName" class="form-label">Имя *</label>
+                            <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Иван" required>
+                            <span class="form-error" id="firstNameError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="birthDate" class="form-label">Дата рождения *</label>
+                            <input type="date" id="birthDate" name="birthDate" class="form-input" required>
+                            <span class="form-error" id="birthDateError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Номер телефона *</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+7 (999) 999-99-99" required>
+                            <span class="form-error" id="phoneError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password" class="form-label">Пароль *</label>
+                            <input type="password" id="password" name="password" class="form-input" placeholder="Создайте пароль" required>
+                            <span class="form-error" id="passwordError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmPassword" class="form-label">Повтор пароля *</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" placeholder="Повторите пароль" required>
+                            <span class="form-error" id="confirmPasswordError"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group form-group--checkbox">
+                        <input type="checkbox" id="agreement" name="agreement" class="form-checkbox" required>
+                        <label for="agreement" class="form-checkbox-label">
+                            Я соглашаюсь с обработкой персональных данных и принимаю 
+                            <a href="#" class="form-link">пользовательское соглашение</a>
+                        </label>
+                        <span class="form-error" id="agreementError"></span>
+                    </div>
+                    
+                    <button type="submit" class="button button--primary auth-button">Зарегистрироваться</button>
+                    
+                    <div class="auth-links">
+                        <p>Уже есть аккаунт? <a href="login.html" class="auth-link">Войдите</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (такой же как на главной) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">Контакты</h3>
+                    <p class="footer__text">Телефон: 8-800-999-55-99</p>
+                    <p class="footer__text">Email: support@bestgames.ru</p>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Клиентам</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Помощь</a></li>
+                        <li><a href="#" class="footer__link">Акции</a></li>
+                        <li><a href="#" class="footer__link">Гарантии</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Навигация</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="register.html" class="footer__link">Регистрация</a></li>
+                        <li><a href="login.html" class="footer__link">Авторизация</a></li>
+                        <li><a href="profile.html" class="footer__link">Личный кабинет</a></li>
+                        <li><a href="index.html#search" class="footer__link">Поиск</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>
